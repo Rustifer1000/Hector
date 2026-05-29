@@ -397,10 +397,8 @@ h3 {
 }
 
 .process__panel {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: var(--space-5);
-  padding: var(--space-5);
+  display: block; /* Switched from grid to block for horizontal layout */
+  padding: var(--space-5) var(--space-6);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background:
@@ -409,21 +407,84 @@ h3 {
   box-shadow: var(--shadow-soft);
 }
 
+.process__header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.process__header h2 {
+  margin-bottom: 0;
+}
+
+.process__timeline {
+  position: relative;
+  padding-top: var(--space-2);
+}
+
+.process__rod {
+  position: absolute;
+  top: 16px;
+  left: 6%;
+  right: 6%;
+  height: 10px;
+  background: linear-gradient(180deg, #e4d5c7 0%, #d0bba6 40%, #b59f88 100%);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.5);
+  z-index: 1;
+}
+
+.process__rod::before,
+.process__rod::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 8px;
+  background: linear-gradient(180deg, #f0f0f0, #a9a9a9, #666);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.process__rod::before {
+  left: -4px;
+}
+
+.process__rod::after {
+  right: -4px;
+}
+
 .process__steps {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-3);
+  position: relative;
+  z-index: 2;
 }
 
 .process__step {
-  padding-top: var(--space-2);
-  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.process__ring {
+  width: 18px;
+  height: 38px;
+  margin-bottom: var(--space-3);
+  border: 4px solid #b37358; /* Copper color */
+  border-radius: 9px;
+  background: transparent;
+  box-shadow: 
+    4px 0px 6px -2px rgba(0,0,0,0.3), 
+    inset 2px 0px 4px -1px rgba(255,255,255,0.6),
+    inset -2px 0px 4px -1px rgba(0,0,0,0.3);
 }
 
 .process__number {
-  display: inline-block;
-  margin-bottom: 10px;
-  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   color: var(--color-accent);
@@ -563,7 +624,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .process__panel,
   .project-layout,
   .section-heading {
     grid-template-columns: 1fr;
@@ -605,6 +665,22 @@ h3 {
 
   .process__steps {
     grid-template-columns: 1fr;
+  }
+
+  .process__header {
+    text-align: left;
+  }
+
+  .process__rod,
+  .process__ring {
+    display: none; /* Hide visual rod/rings on mobile for a clean stacked layout */
+  }
+
+  .process__step {
+    align-items: flex-start;
+    text-align: left;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-3);
   }
 
   .hero {
