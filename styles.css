@@ -512,7 +512,7 @@ h3 {
   min-height: 560px;
   background:
     linear-gradient(180deg, rgba(25, 28, 25, 0.08), rgba(25, 28, 25, 0.18)),
-    url("assets/walk-and-stairs1.jpg")
+    url("assets/path-with-steps.webp")
       center / cover no-repeat;
   box-shadow: var(--shadow-soft);
 }
