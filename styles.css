@@ -377,7 +377,7 @@ h3 {
 .card__image--maintain {
   background-image:
     linear-gradient(180deg, rgba(24, 28, 24, 0.08), rgba(24, 28, 24, 0.18)),
-    url("assets/walk-and-stairs1.jpg");
+    url("assets/backlot-stairs.webp");
 }
 
 .text-link {
