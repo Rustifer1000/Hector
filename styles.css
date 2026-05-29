@@ -393,7 +393,7 @@ h3 {
 }
 
 .process {
-  padding-top: 0;
+  padding-top: var(--space-6); /* Adds a controlled, consistent gap above the panel */
 }
 
 .process__panel {
