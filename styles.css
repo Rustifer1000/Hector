@@ -460,7 +460,7 @@ h3 {
 .project__image--estate {
   background-image:
     linear-gradient(180deg, rgba(26, 28, 26, 0.12), rgba(26, 28, 26, 0.2)),
-    url("assets/hero.webp");
+    url("assets/pond-and-stairs.webp");
 }
 
 .project__image--pool {
