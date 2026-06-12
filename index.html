@@ -322,25 +322,28 @@
             </label>
             <label class="form-field form-field--full">
               <span>Property Location</span>
-              <input
-                type="text"
-                name="property_location"
-                autocomplete="street-address"
-                placeholder="Montecito, Santa Barbara, or nearby"
-              >
+              <select name="property_location" required>
+                <option value="">Select an area</option>
+                <option value="Santa Barbara">Santa Barbara</option>
+                <option value="Montecito">Montecito</option>
+                <option value="Goleta">Goleta</option>
+                <option value="Summerland">Summerland</option>
+                <option value="Hope Ranch">Hope Ranch</option>
+                <option value="Other / Nearby">Other / Nearby</option>
+              </select>
             </label>
             <label class="form-field form-field--full">
-              <span>How can we help?</span>
+              <span>Project or Maintenance Needs</span>
               <textarea
                 name="message"
                 rows="5"
                 required
-                placeholder="Tell us a little about your landscape, timeline, or maintenance needs."
+                placeholder="Tell us about your landscape, maintenance needs, timeline, or goals."
               ></textarea>
             </label>
           </div>
           <div class="button-row button-row--center contact-form__actions">
-            <button class="button button--secondary contact-form__submit" type="submit">Contact Us</button>
+            <button class="button button--primary contact-form__submit" type="submit">Contact Us</button>
           </div>
           <p class="contact-form__note">We'll follow up to discuss your property and the best next step.</p>
         </form>
